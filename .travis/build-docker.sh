@@ -75,9 +75,14 @@ if [ $status -ne 0 ]; then
   exit 1
 fi
 
-
-env | grep DOCKER
-
+echo " "
+echo "Remove the build container"
+docker rmi ${IMAGE}:build
+status=$?
+if [ $status -ne 0 ]; then
+  echo "Error: stop status $status"
+  exit 1
+fi
 
 
 # To have `DOCKER_USERNAME` and `DOCKER_PASSWORD`
