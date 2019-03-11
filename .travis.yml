@@ -1,8 +1,6 @@
 # make use of vm's
 sudo: 'required'
 
-language: java
-
 # have the docker service set up (we'll
 # update it later)
 services:
@@ -15,4 +13,3 @@ before_install:
   
 script:
   - './.travis/build-docker.sh'
-
