@@ -131,5 +131,5 @@ with open(raw_input_weather_file) as fin:
                     
                     
                 epoch = int(time.mktime(time.strptime(d,p))) 
-                fo.write( measurement + "," + add_tags(measurement) + " " + newline + " " + str(epoch) + "\n" )
+                fo.write( measurement + "," + add_tags(measurement) + " " + newline + " " + str(epoch) + "000\n" )
     fo.close()
