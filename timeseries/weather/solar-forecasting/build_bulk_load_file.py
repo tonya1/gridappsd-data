@@ -130,6 +130,6 @@ with open(raw_input_weather_file) as fin:
 #                   now_time = datetime.now(timezone('US/Mountain'))
                     
                     
-                epoch = int(time.mktime(time.strptime(d,p))) + utc_offset(daylight_savings_time)
+                epoch = int(time.mktime(time.strptime(d,p))) 
                 fo.write( measurement + "," + add_tags(measurement) + " " + newline + " " + str(epoch) + "\n" )
     fo.close()
