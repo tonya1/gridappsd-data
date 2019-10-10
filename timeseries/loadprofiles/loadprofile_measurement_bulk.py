@@ -134,4 +134,4 @@ for day_counter in range(1,366):
     day_counter = day_counter + 1
 
 fo.close()
-print "created..." + bulk_load_output_file
+print ("created..." + bulk_load_output_file)
