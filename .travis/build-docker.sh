@@ -50,7 +50,7 @@ fi
 
 echo " "
 echo "Importing data"
-docker exec -it $did /bin/bash -c "influx -import -path=/tmp/ghi_dhi_bulkload.txt -precision s"
+docker exec -it $did /bin/bash -c "influx -import -path=/tmp/ghi_dhi_bulkload.txt -precision s; influx -import -path=/tmp/loadprofile_measurement_out.txt -precision s"
 status=$?
 if [ $status -ne 0 ]; then
   echo "Error: influxdb ping status $status"
