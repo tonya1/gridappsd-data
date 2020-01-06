@@ -39,7 +39,7 @@ if [ "$status" -gt 0 ]; then
 fi
 
 #allow the database to come up
-sleep 10
+sleep 60
 
 curl -sl -I http://localhost:8086/ping
 status=$?
